@@ -19,3 +19,6 @@ I would like to use three ways for the service forwarding: ipfw-nat, pf, pound.
 
 The jails should rely on the advantages of the zfs filesystem.
 The zfs send/receive is an excellent way of cloneing template jails.
+
+How to start:
+All the neccessary files are in the prepare-basejail.tgz file, but you can see it one-by-one depending on your interest.
