@@ -1,0 +1,22 @@
+# natd.rules
+# this file will prepare natd rules
+# format jail_ip:jail_port host_ip:host_port
+# List of Ports:
+#   Host SSH: 2221 - 2229
+#    HOST WEBERVER: 8080,4443
+#   JAILS SSH: 22
+#   JAIL WEB SERVER: 80, 443
+#   JAIL DNS SERVER: 53
+myIP='192.168.5.230'
+# jails sshd access
+redirect_port tcp 10.1.1.1:22 $myIP:2221
+redirect_port tcp 10.1.1.2:22 $myIP:2222
+redirect_port tcp 10.1.1.3:22 $myIP:2223
+redirect_port tcp 10.1.1.4:22 $myIP:2224
+redirect_port tcp 10.1.1.5:22 $myIP:2225
+redirect_port tcp 10.1.1.6:22 $myIP:2226
+redirect_port tcp 10.1.1.7:22 $myIP:2227
+redirect_port tcp 10.1.1.8:22 $myIP:2228
+redirect_port tcp 10.1.1.9:22 $myIP:2229
+#redirect_port tcp $myIP:80 80
+#redirect_port tcp $myIP:443 443
