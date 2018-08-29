@@ -2,13 +2,16 @@
 sysrc jail_enable=YES
 sysrc zfs_enable=YES
 pkg install pkg wget
-zfs create adat/.my_jails_cache
-JAILROOT="/mnt/adat"
+pkg install unzip
+JAILPOOL=zdata
+FREEBSDVERSION='11.2-RELEASE'
+zfs create $JAILPOOL/.my_jails_cache
+JAILROOT="/mnt/zdata"
 cd $JAILROOT/.my_jails_cache/
-wget http://ftp1.us.freebsd.org/pub/FreeBSD/releases/amd64/11.1-RELEASE/base.txz
-wget http://ftp1.us.freebsd.org/pub/FreeBSD/releases/amd64/11.1-RELEASE/lib32.txz
-wget http://ftp1.us.freebsd.org/pub/FreeBSD/releases/amd64/11.1-RELEASE/src.txz
-wget http://ftp1.us.freebsd.org/pub/FreeBSD/releases/amd64/11.1-RELEASE/ports.txz
+wget http://ftp1.us.freebsd.org/pub/FreeBSD/releases/amd64/$FREEBSDVERSION/base.txz
+wget http://ftp1.us.freebsd.org/pub/FreeBSD/releases/amd64/$FREEBSDVERSION/lib32.txz
+wget http://ftp1.us.freebsd.org/pub/FreeBSD/releases/amd64/$FREEBSDVERSION/src.txz
+wget http://ftp1.us.freebsd.org/pub/FreeBSD/releases/amd64/$FREEBSDVERSION/ports.txz
 tar -jxf base.txz
 tar -jxf lib32.txz
 echo "A szükséges fájlok letöltve és kicsomagolva"
