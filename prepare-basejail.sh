@@ -5,8 +5,8 @@ pkg install pkg wget
 pkg install unzip
 JAILPOOL=zdata
 FREEBSDVERSION='11.2-RELEASE'
-zfs create $JAILPOOL/.my_jails_cache
 JAILROOT="/mnt/zdata"
+zfs create $JAILPOOL/.my_jails_cache
 cd $JAILROOT/.my_jails_cache/
 wget http://ftp1.us.freebsd.org/pub/FreeBSD/releases/amd64/$FREEBSDVERSION/base.txz
 wget http://ftp1.us.freebsd.org/pub/FreeBSD/releases/amd64/$FREEBSDVERSION/lib32.txz
