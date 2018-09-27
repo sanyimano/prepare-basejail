@@ -1,4 +1,6 @@
 #!/bin/sh
+JAILPOOL="zfsdata"
+JAILROOT="/mnt/zfsdata"
 passwd
 mkdir /usr/home
 ln -s /usr/home /home
@@ -7,7 +9,7 @@ make
 newaliases
 echo 'ENV=$HOME/.shrc ; export ENV' >> /root/.profile
 sysrc sendmail_enable=NO
-sysrc syslogd_flags=-sschroot /zdata/.my_jails_cache /bin/csh
+sysrc syslogd_flags=-sschroot $JAILROOT/.my_jails_cache /bin/csh
 sysrc rpcbind_enable=NO
 sysrc sshd_enable=YES
 echo "PermitRootLogin yes" >> /etc/ssh/sshd_config
