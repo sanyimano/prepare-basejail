@@ -22,4 +22,6 @@ cp /etc/hosts $JAILROOT/.my_jails_cache/etc/
 cp prepare-inside.sh $JAILROOT/.my_jails_cache/root
 cp jail.conf /etc/
 service jail start
+echo "Log in to the new jail with zhe command jexec basejail csh"
+echo "And run the prepare-inside.sh script"
 
