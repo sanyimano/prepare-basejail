@@ -1,4 +1,5 @@
-# prepare-basejail
+# prepare-basejail (depricated)
+# USE BASTILLE!
 scripts for automatic jail creation, using the advantages of zfs
 on FreeBSD RELEASE and XigmaNAS installations.
 Thin includes:
